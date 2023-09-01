@@ -27,15 +27,20 @@ const fooCampaigns = [
   },
 ];
 
+
 function dateFormatChange(date){
-  return dayjs(date).format('MM/DD/YYYY')
+  const output = date.split("/")
+  const days = output[0]
+  const months = output[1]
+  const years = output[2]
+  return months + '/' + days + '/' + years
 }
 
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
     <li key={campaign.id}>
-      {campaign.title} | start date: {dateFormatChange(campaign.startdate)} | end date:{' '}
-      {campaign.enddate} | Total Impressions {campaign.totalImpressions} | Total
+      {campaign.title} | start date: {dateFormatChange(campaign.startdate)} | end date: {dateFormatChange(campaign.enddate)} |
+      Total Impressions {campaign.totalImpressions} | Total
       Responses {campaign.totalResponse}
     </li>
   ));
