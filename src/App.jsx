@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 
 function dateFormatChange(date) {
-  const output = date.split('/');
-  const days = output[0];
-  const months = output[1];
-  const years = output[2];
-  return months + '/' + days + '/' + years;
+  if (date) {
+    const output = date.split('/');
+    const days = output[0];
+    const months = output[1];
+    const years = output[2];
+    return months + '/' + days + '/' + years;
+  } else {
+    return 'not a valid date';
+  }
 }
 
 function App() {
@@ -18,15 +22,12 @@ function App() {
     fetch('./server/results.json')
       .then((res) => res.json())
       .then((data) => console.log(data));
-  });
+  }, []);
 
   const campaignList = fooCampaigns.map((campaign) => (
     <li key={campaign.id}>
-      {campaign.title} | start date:{' '}
-      {dateFormatChange(campaign.startdate)
-        ? campaign.startdate
-        : 'Invalid Date'}{' '}
-      | end date:{' '}
+      {campaign.title} | start date:
+      {campaign.startdate ? campaign.startdate : 'Invalid Date'} | end date:{' '}
       {dateFormatChange(campaign.enddate) ? campaign.enddate : 'Invalid Date'} |
       Total Impressions {campaign.totalImpressions} | Total Responses{' '}
       {campaign.totalResponse}
