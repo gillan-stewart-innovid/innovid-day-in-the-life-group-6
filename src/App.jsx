@@ -1,3 +1,5 @@
+import "./app.css";
+
 const fooCampaigns = [
   {
     id: 16346145,
@@ -28,17 +30,23 @@ const fooCampaigns = [
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
     <li key={campaign.id}>
-      {campaign.title} | start date: {campaign.startdate ? campaign.startdate : 'Invalid Date'} | end date:{' '}
-      {campaign.enddate ? campaign.enddate : 'Invalid Date'} | Total Impressions {campaign.totalImpressions} | Total
-      Responses {campaign.totalResponse}
-    </li>
+      {campaign.title} |
+      Status: {campaign.startdate ? campaign.startdate : 'Invalid Date'} |
+      start date: {campaign.startdate ? campaign.startdate : 'Invalid Date'} |
+      end date:{' '}  {campaign.enddate ? campaign.enddate : 'Invalid Date'} |
+      Total Impressions {campaign.totalImpressions} |
+      Total Responses {campaign.totalResponse}
     </li>
   ));
 
   return (
     <>
-      <h1>Code Clan - event</h1>
-      <ul>{campaignList}</ul>
+      <nav>
+      </nav>
+      <body className="body-style">
+        <h1 className="home-page-title">Code Clan - event</h1>
+        <ul>{campaignList}</ul>
+      </body>
     </>
   );
 }

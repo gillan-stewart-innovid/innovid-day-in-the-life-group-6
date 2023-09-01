@@ -1,0 +1,36 @@
+.nav-style {
+    /* Layout Properties */
+    top: 0px;
+    left: 0px;
+    width: 1681px;
+    height: 47px;
+    /* UI Properties */
+    background: #191B21 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.body-style {
+    /* Layout Properties */
+    top: 0px;
+    left: 0px;
+    width: 1680px;
+    height: 1049px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.home-page-title {
+    /* Layout Properties */
+    top: 67px;
+    left: 100px;
+    width: 263px;
+    height: 37px;
+    /* UI Properties */
+    color: var(--neutral-7);
+    text-align: left;
+    font: normal normal normal 30px/28px Montserrat;
+    letter-spacing: 0px;
+    color: #262626;
+    opacity: 1;
+}
