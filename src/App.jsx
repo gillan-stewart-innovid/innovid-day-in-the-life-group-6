@@ -35,10 +35,16 @@ function App() {
     </li>
   ));
 
+  const totalImpressionsAddUp = <p>Total Impressions for all campaigns: {fooCampaigns.reduce((accImp, campaign) => ( accImp + (campaign.totalImpressions ? campaign.totalImpressions : 0)),0)}</p>
+  const totalResponsesAddUp = <p>Total Responses for all campaigns: {fooCampaigns.reduce((accImp, campaign) => ( accImp + (campaign.totalResponse ? campaign.totalResponse : 0)),0)}</p>
+  
+
   return (
     <>
       <h1>Code Clan - event</h1>
       <ul>{campaignList}</ul>
+      <p>{totalImpressionsAddUp}</p>
+      <p>{totalResponsesAddUp}</p>
     </>
   );
 }
