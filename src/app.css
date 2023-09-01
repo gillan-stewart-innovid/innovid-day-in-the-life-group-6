@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+.navbar-style {
+    /* Layout Properties */
+    top: 0px;
+    left: 0px;
+    width: 1681px;
+    height: 47px;
+    /* UI Properties */
+    background: #191B21 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.body-style {
+    /* Layout Properties */
+    top: 0px;
+    left: 0px;
+    width: 1680px;
+    height: 1049px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-left: 67px;
+    padding-right: 67px;
+}
+
+.home-page-title {
+    /* Layout Properties */
+    height: 37px;
+    /* UI Properties */
+    color: var(--neutral-7);
+    text-align: left;
+    font: normal normal normal 30px/28px Montserrat;
+    letter-spacing: 0px;
+    color: #262626;
+    opacity: 1;
+}
+
+.table-style {
+    border-collapse: collapse;
+}
+
+.tr-style {
+    background: #F5F5F5;
+}
+
+.tr-data-style {
+    border-bottom: 2px solid #F5F5F5;
+}
+
+.tr-data-style:hover {
+    background: #F5F5F5;
+}
+
+.th-title-campaign {
+    /* Layout Properties */
+    top: 146px;
+    left: 101px;
+    width: 500px;
+    height: 50px;
+    /* UI Properties */
+    opacity: 1;
+}
+
+.th-title-data {
+    /* Layout Properties */
+    top: 146px;
+    left: 931px;
+    width: 150px;
+    height: 50px;
+    /* UI Properties */
+    opacity: 1;
+}
+
+.table-title {
+    /* UI Properties */
+    text-align: left;
+    font: 13px/16px Montserrat;
+    letter-spacing: 0px;
+    color: #595959;
+    opacity: 1;
+}
+
+.th-campaign {
+    text-align: left;
+    font: normal normal normal 13px/16px Montserrat;
+    letter-spacing: 0px;
+    color: #595959;
+    opacity: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.table-element-padding {
+    padding-left: 20px;
+}
+
+/* .table-title-background {
+    background: #F5F5F5;
+} */
+
+.table-bold {
+    font-weight: bold;
+}
+
+.a-campaign {
+    color: #2990FF;
+    text-decoration: none;
+}
