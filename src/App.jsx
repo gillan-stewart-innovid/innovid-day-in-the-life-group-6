@@ -32,7 +32,7 @@ function dateFormatChange(date){
   const days = output[0]
   const months = output[1]
   const years = output[2]
-  return months + '/' + days + '/' + years
+  return months + '-' + days + '-' + years
 }
 
 function App() {
