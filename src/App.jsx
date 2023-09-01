@@ -44,7 +44,6 @@ function App() {
 
       Responses {campaign.totalResponse}
     </li>
-    </li>
   ));
 
 
