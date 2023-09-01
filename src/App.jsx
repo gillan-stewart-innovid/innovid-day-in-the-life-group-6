@@ -1,4 +1,6 @@
+
 import "./app.css";
+
 
 const fooCampaigns = [
   {
@@ -27,6 +29,15 @@ const fooCampaigns = [
   },
 ];
 
+
+function dateFormatChange(date){
+  const output = date.split("/")
+  const days = output[0]
+  const months = output[1]
+  const years = output[2]
+  return months + '-' + days + '-' + years
+}
+
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
     <tr key={campaign.id} className="tr-data-style">
@@ -37,6 +48,11 @@ function App() {
       <th className="th-title-data table-title text-center">{campaign.totalResponse}</th>
     </tr>
   ));
+
+
+  const totalImpressionsAddUp = <p>Total Impressions for all campaigns: {fooCampaigns.reduce((accImp, campaign) => ( accImp + (campaign.totalImpressions ? campaign.totalImpressions : 0)),0)}</p>
+  const totalResponsesAddUp = <p>Total Responses for all campaigns: {fooCampaigns.reduce((accImp, campaign) => ( accImp + (campaign.totalResponse ? campaign.totalResponse : 0)),0)}</p>
+  
 
   return (
     <>
