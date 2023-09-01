@@ -26,8 +26,32 @@ const fooCampaigns = [
     totalResponse: 13408,
   },
 ];
+import { useState, useEffect } from 'react';
+
+function dateFormatChange(date) {
+  if (date) {
+    const output = date.split('/');
+    const days = output[0];
+    const months = output[1];
+    const years = output[2];
+    return months + '/' + days + '/' + years;
+  } else {
+    return 'not a valid date';
+  }
+}
 
 function App() {
+  const [fooCampaigns, setFooCampaigns] = useState([]);
+
+  useEffect(() => {
+    fetch('./server/campaigns.json')
+      .then((res) => res.json())
+      .then((data) => setFooCampaigns(data));
+    fetch('./server/results.json')
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+
   const campaignList = fooCampaigns.map((campaign) => (
     <tr key={campaign.id} className="tr-data-style">
       <th className="th-title-campaign table-title table-element-padding"><a href="/" className="a-campaign">{campaign.title}</a></th>
@@ -37,6 +61,33 @@ function App() {
       <th className="th-title-data table-title text-center">{campaign.totalResponse}</th>
     </tr>
   ));
+
+  const TotalImpressionsAddUp = () => {
+    return (
+      <p>
+        Total Impressions for all campaigns:{' '}
+        {fooCampaigns.reduce(
+          (accImp, campaign) =>
+            accImp +
+            (campaign.totalImpressions ? campaign.totalImpressions : 0),
+          0,
+        )}
+      </p>
+    );
+  };
+
+  const TotalResponsesAddUp = () => {
+    return (
+      <p>
+        Total Responses for all campaigns:{' '}
+        {fooCampaigns.reduce(
+          (accImp, campaign) =>
+            accImp + (campaign.totalResponse ? campaign.totalResponse : 0),
+          0,
+        )}
+      </p>
+    );
+  };
 
   return (
     <>

@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "npx prettier . --write"
   },
   "dependencies": {
+    "eslint-config-prettier": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.7"
@@ -22,6 +24,20 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5"
-  }
+    "vite": "^4.4.5",
+    "prettier": "^3.0.3",
+    "eslint-config-prettier": "^9.0.0"
+  },
+  "description": "- `git clone`\r - cd into project\r - `npm i` (please use node 16 or higher)\r - `npm run dev`\r - By default, Vite will run on `http://localhost:5173/`",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mholwill123/innovid-day-in-the-life-group-6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mholwill123/innovid-day-in-the-life-group-6/issues"
+  },
+  "homepage": "https://github.com/mholwill123/innovid-day-in-the-life-group-6#readme"
 }

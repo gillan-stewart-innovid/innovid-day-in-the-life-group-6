@@ -1,0 +1,31 @@
+[
+    {
+    "id": 16346145,
+    "title": "Jan - Mar 2023",
+    "enddate": "31/03/2023",
+    "totalImpressions": 1113,
+    "totalResponse": 11008
+    },
+    {
+    "id": 83349140,
+    "title": "Apr - Jun 2023",
+    "startdate": "01/04/2023",
+    "enddate": "30/06/2023",
+    "totalImpressions": 12291,
+    "totalResponse": 18487
+    },
+    {
+    "id": 19343106,
+    "title": "Jul - Sept 2023",
+    "startdate": "01/07/2023",
+    "enddate": "30/09/2023",
+    "totalImpressions": 12498,
+    "totalResponse": 11239
+    },
+    {
+    "id": 63129199,
+    "title": "Oct - Dec 2023",
+    "startdate": "01/10/2023",
+    "enddate": "31/12/2023"
+    }
+]
