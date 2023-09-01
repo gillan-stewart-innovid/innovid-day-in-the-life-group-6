@@ -44,6 +44,10 @@
     background: #F5F5F5;
 }
 
+.tr-data-style {
+    border-bottom: 2px solid #F5F5F5;
+}
+
 .tr-data-style:hover {
     background: #F5F5F5;
 }
