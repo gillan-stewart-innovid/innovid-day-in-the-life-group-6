@@ -30,11 +30,15 @@ import { useState, useEffect } from "react"
 function App() {
 
   const [fooCampaigns, setFooCampaigns] = useState([])
+
   
   useEffect(() => {
-  fetch("https://cclan.s3.eu-west-1.amazonaws.com/campaigns.json")
+  fetch("./server/campaigns.json")
     .then((res) => res.json())
     .then((data) => setFooCampaigns(data))
+  fetch("./server/results.json")
+    .then((res) => res.json())
+    .then((data) => console.log(data))
   });
 
 
