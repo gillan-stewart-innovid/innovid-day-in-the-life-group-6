@@ -7,6 +7,6 @@ describe('App', () => {
     beforeEach(() => {
         container = render(<App />)
     })
-
+// just assume it aall works
 })
 
