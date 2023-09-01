@@ -40,8 +40,8 @@ function App() {
   const campaignList = fooCampaigns.map((campaign) => (
     <li key={campaign.id}>
 
-      {campaign.title} | start date: {campaign.startdate ? campaign.startdate : 'Invalid Date'} | end date:{' '}
-      {campaign.enddate ? campaign.enddate : 'Invalid Date'} | Total Impressions {campaign.totalImpressions} | Total
+      {campaign.title} | start date: {dateFormatChange(campaign.startdate) ? campaign.startdate : 'Invalid Date'} | end date:{' '}
+      {dateFormatChange(campaign.enddate) ? campaign.enddate : 'Invalid Date'} | Total Impressions {campaign.totalImpressions} | Total
 
       Responses {campaign.totalResponse}
     </li>
