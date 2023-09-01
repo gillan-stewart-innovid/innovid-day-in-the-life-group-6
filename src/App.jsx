@@ -29,24 +29,33 @@ const fooCampaigns = [
 
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
-    <li key={campaign.id}>
-      {campaign.title} |
-      Status: {campaign.startdate ? campaign.startdate : 'Invalid Date'} |
-      start date: {campaign.startdate ? campaign.startdate : 'Invalid Date'} |
-      end date:{' '}  {campaign.enddate ? campaign.enddate : 'Invalid Date'} |
-      Total Impressions {campaign.totalImpressions} |
-      Total Responses {campaign.totalResponse}
-    </li>
+    <tr key={campaign.id}>
+      <th className="th-title-campaign table-title table-element-padding">{campaign.title}</th>
+      <th className="th-title-data table-title text-center">{campaign.startdate ? campaign.startdate : 'Invalid Date'}</th>
+      <th className="th-title-data table-title text-center">{campaign.enddate ? campaign.enddate : 'Invalid Date'} </th>
+      <th className="th-title-data table-title text-center">{campaign.totalImpressions}</th>
+      <th className="th-title-data table-title text-center">{campaign.totalResponse}</th>
+    </tr>
   ));
 
   return (
     <>
-      <nav>
-      </nav>
-      <body className="body-style">
-        <h1 className="home-page-title">Code Clan - event</h1>
-        <ul>{campaignList}</ul>
-      </body>
+      <main >
+        <nav className="navbar-style"></nav>
+        <body className="body-style">
+          <h1 className="home-page-title">List of Campaigns</h1>
+          <table>
+            <tr>
+              <th className="th-title-campaign table-title table-bold table-element-padding table-title-background">Campaign</th>
+              <th className="th-title-data table-title table-bold text-center table-title-background">Start Date</th>
+              <th className="th-title-data table-title table-bold text-center table-title-background">End Date</th>
+              <th className="th-title-data table-title table-bold text-center table-title-background">Impressions</th>
+              <th className="th-title-data table-title table-bold text-center table-title-background">Responses</th>
+            </tr>
+            {campaignList}
+            </table>
+        </body>
+      </main>
     </>
   );
 }
