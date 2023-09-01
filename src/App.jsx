@@ -29,8 +29,8 @@ const fooCampaigns = [
 
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
-    <tr key={campaign.id}>
-      <th className="th-title-campaign table-title table-element-padding">{campaign.title}</th>
+    <tr key={campaign.id} className="tr-data-style">
+      <th className="th-title-campaign table-title table-element-padding"><a href="/" className="a-campaign">{campaign.title}</a></th>
       <th className="th-title-data table-title text-center">{campaign.startdate ? campaign.startdate : 'Invalid Date'}</th>
       <th className="th-title-data table-title text-center">{campaign.enddate ? campaign.enddate : 'Invalid Date'} </th>
       <th className="th-title-data table-title text-center">{campaign.totalImpressions}</th>
@@ -44,13 +44,13 @@ function App() {
         <nav className="navbar-style"></nav>
         <body className="body-style">
           <h1 className="home-page-title">List of Campaigns</h1>
-          <table>
-            <tr>
-              <th className="th-title-campaign table-title table-bold table-element-padding table-title-background">Campaign</th>
-              <th className="th-title-data table-title table-bold text-center table-title-background">Start Date</th>
-              <th className="th-title-data table-title table-bold text-center table-title-background">End Date</th>
-              <th className="th-title-data table-title table-bold text-center table-title-background">Impressions</th>
-              <th className="th-title-data table-title table-bold text-center table-title-background">Responses</th>
+          <table className="table-style">
+            <tr className="tr-style">
+              <th className="th-title-campaign table-title table-bold table-element-padding">Campaign</th>
+              <th className="th-title-data table-title table-bold text-center">Start Date</th>
+              <th className="th-title-data table-title table-bold text-center">End Date</th>
+              <th className="th-title-data table-title table-bold text-center">Impressions</th>
+              <th className="th-title-data table-title table-bold text-center">Responses</th>
             </tr>
             {campaignList}
             </table>
