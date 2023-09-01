@@ -1,3 +1,4 @@
+
 const fooCampaigns = [
   {
     id: 16346145,
@@ -25,15 +26,27 @@ const fooCampaigns = [
   },
 ];
 
+
+function dateFormatChange(date){
+  const output = date.split("/")
+  const days = output[0]
+  const months = output[1]
+  const years = output[2]
+  return months + '/' + days + '/' + years
+}
+
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
     <li key={campaign.id}>
-      {campaign.title} | start date: {campaign.startdate ? campaign.startdate : 'Invalid Date'} | end date:{' '}
-      {campaign.enddate ? campaign.enddate : 'Invalid Date'} | Total Impressions {campaign.totalImpressions} | Total
+
+      {campaign.title} | start date: {dateFormatChange(campaign.startdate) ? campaign.startdate : 'Invalid Date'} | end date:{' '}
+      {dateFormatChange(campaign.enddate) ? campaign.enddate : 'Invalid Date'} | Total Impressions {campaign.totalImpressions} | Total
+
       Responses {campaign.totalResponse}
     </li>
     </li>
   ));
+
 
   const totalImpressionsAddUp = <p>Total Impressions for all campaigns: {fooCampaigns.reduce((accImp, campaign) => ( accImp + (campaign.totalImpressions ? campaign.totalImpressions : 0)),0)}</p>
   const totalResponsesAddUp = <p>Total Responses for all campaigns: {fooCampaigns.reduce((accImp, campaign) => ( accImp + (campaign.totalResponse ? campaign.totalResponse : 0)),0)}</p>
