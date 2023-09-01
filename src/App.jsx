@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 const fooCampaigns = [
   {
     id: 16346145,
@@ -25,14 +27,21 @@ const fooCampaigns = [
   },
 ];
 
+function dateFormatChange(date){
+  return dayjs(date).format('MM/DD/YYYY')
+}
+
 function App() {
   const campaignList = fooCampaigns.map((campaign) => (
     <li key={campaign.id}>
-      {campaign.title} | start date: {campaign.startdate} | end date:{' '}
+      {campaign.title} | start date: {dateFormatChange(campaign.startdate)} | end date:{' '}
       {campaign.enddate} | Total Impressions {campaign.totalImpressions} | Total
       Responses {campaign.totalResponse}
     </li>
   ));
+
+
+
 
   return (
     <>
